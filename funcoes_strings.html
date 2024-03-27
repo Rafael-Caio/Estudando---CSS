@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - Funções Nativas</title>
+    
+    <script>
+       /*OBS: Os methodos js são funções e podem receber parametros ou não.
+         Propriedade length: ela retorna a quantidade de caracteres presentes em uma string.
+         Dessa forma podemos testar o tamanho de uma string e tormar uma decisão, como truncar
+         ou cortar caso seja necessário a string para ajustar o texto a uma parte específica da página.
+         Assim exibir os elementos html de forma correta, sem quebrar o layout.
+       */
+      //length retorna a quantidade de caracteres.
+      document.write("Rafael Caio Santos e Santos".length)
+      document.write("<br />")
+      //charAt() retorna a posição de um caractere com base na posição do mesmo.
+      document.write("Rafael Caio Santos e Santos".charAt(0))
+      document.write("<br />")
+      //indexOf() retorna a posição da PRIMEIRA ocorrencia de um caractere específico dentro de uma string.
+      //OBS; sempre que o caractere não existir vai retornar -1.
+      var nome = "Rafael Caio Santos e Santos"
+      document.write(nome.indexOf("C"))
+      document.write("<br />")
+      //replace() permite com base em um valor de pesquisa ou com outro valorde modificação, substituir textos em uma string.
+      /*Eles pesquisa a cadeia de caracteres atribuida como primeiro parametro e caso encontre,
+        ele substitui pelos valores atribuidos como segundo parametro.
+      */
+      var nome = "Rafael Caio Santos e Santos"
+      document.write(nome.replace("Santos e Santos", "é abençoado por Deus!"))
+      document.write("<br />")
+      //substr() permite extrair parte de uma string com base em uma posição inicial, seguido do valor da quantidade de caracteres que queremos extrair.
+      var nome = "Rafael Caio Santos e Santos"
+      document.write(nome.substr(7, 4))
+      document.write("<br />")
+      //toLowerCase() converte todos os caracteres da string para caixa baixa.
+      var nome = "Rafael Caio Santos e Santos"
+      document.write(nome.toLowerCase())
+      document.write("<br />")
+      //toUpperCase() converte todos os caracteres da string para caixa alta.
+      var nome = "Rafael Caio Santos e Santos"
+      document.write(nome.toUpperCase())
+      document.write("<br />")
+      //trim() remove os espaços em branco das extremidades de uma string.
+      //trimStart() remove espaços no inicio.
+      //trimEnd() remove espaços no final.
+      var x = "  Rafael Caio Santos e Santos  "
+      document.write("-" + x.trim() + "-")
+      document.write("<br />")
+      //concat() faz a concatenação de uma variavel com uma string.
+      //colocamos o primeiro parametro vazio, onde vai entrar a variável e o segundo parametro a string para concatenar. 
+      var x = "Rafael Caio Santos e Santos"
+      document.write(x.concat(" ", " filho de Deus!"))
+      document.write("<br />")
+      //padStart() usado para preencher uma string desde o inicio.
+      //padEnd() usado para preencher uma string do final.
+      //OBS: no caso de number, temos que converter em string.
+      //O primeiro parametro indica a quantidade de caracteres e o segundo parametro indica o valor que vai preencher a string.
+      var x = 7
+      var x = x.toString()
+      document.write(x.padStart(4, 1))
+      document.write("<br />")
+      document.write(x.padEnd(4, 1))
+      document.write("<br />")
+      //repeat() usado para repetir strings.
+      //Dentro dos () colocamos o valor que representa a quantidade de repetições da string. 
+      var x = "Rafael Caio Santos e Santos"
+      document.write(x.repeat(2))
+      document.write("<br />")
+      //slice() usado para cortar uma parte da strings e retorna como uma string.
+      //O primeiro parametro indica a posição de inicio do corte e o segundo parametro indica a posição de termino do corte.
+      var x = "Rafael Caio Santos e Santos"
+      document.write(x.slice(7, 11))
+      document.write("<br />")
+      //Quando utilizamos indices [], o valor atribuido dentro dos cochetes, mostra o caractere localizado no valor atribuido.
+      var x = "Rafael Caio Santos e Santos"
+      document.write(x[0])
+      document.write("<br />")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>JavaScript - Eventos Mouse</title>
+        <!-- onclick: é acionado quanto o elemento é clicado.
+             ondblclick: é acionado quando o elemento é clicado 2 vezes.
+             onmouseup: é acionado quando o clique sobre o elemento é liberado (é solto).
+             onmouseover: é acionado quando o curso do mouse sobrepõe o elemento.
+             onmouseout: é acionado quando o mouse sai da região da página ocupada pelo elemento.
+            OBS:podemos combinar estas ações.
+        -->
+        <script>
+            function acao1() {
+                alert("É isso ai! Fé em Deus!")
+                
+            }
+            function acao2() {
+                alert("Não esqueça! Deus esta no controle!")
+            }
+        </script>
+    </head>
+    <body>
+        <!--<div onclick="acao()" style="background: #ccc; height: 150px; width: 150px;"></div>-->
+        <!--<div ondblclick="acao()" style="background: #ccc; height: 150px; width: 150px;"></div>-->
+        <!--<div onmouseup="acao()" style="background: #ccc; height: 150px; width: 150px;"></div>-->
+        <!--<div onmouseover="acao()" style="background: #ccc; height: 150px; width: 150px;"></div>-->
+        <!--<div onmouseout="acao1()" style="background: #ccc; height: 150px; width: 150px;"></div>-->
+        <div onclick="acao1()" onmouseout="acao2()" style="background: #ccc; height: 150px; width: 150px;"></div>
+    </body>
+
+</html>

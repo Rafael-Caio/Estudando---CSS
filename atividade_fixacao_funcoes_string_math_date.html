@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang= pt-br>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width initial-scale=1, shrink-to-fit=no">
+        <title>Atividade funções math, date e string</title>
+        <script>
+            document.write("<h2>Atividade fixação</h2>")
+            var data = new Date()
+            document.write("Data: " + data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear())
+            document.write("<br />")
+            document.write("Hora: " + data.getHours() + ":" + data.getMinutes() + ":" + data.getSeconds() + ":" + data.getMilliseconds())
+            document.write("<br />")
+            //entrada de valores pelo usuário:
+            var num1 = prompt("digite seu primeiro numero: ")
+            var operacao = prompt("digite a operação: ")
+            var num2 = prompt("digite seu segundo numero: ")
+
+            function calc(num1, num2, operacao) {
+                
+                num1 = parseFloat(num1)
+                num2 = parseFloat(num2)
+
+                var resultado = 0
+
+                if (operacao == "soma") {
+                    resultado = num1 + num2
+                }
+                if (operacao == "subtração") {
+                    resultado = num1 - num2
+                }
+
+                return resultado
+            }
+            document.write("O resultado da operação é: "+ calc(num1, num2, operacao))
+            
+
+            //casting de tipo string para number:
+            //num1 = parseInt(num1)
+            //num2 = parseInt(num2)
+            
+            //função para realizar a operação: 
+            /*var soma = num2 + num2
+            function exibirOperacao (num1, num2, soma) {
+               document.write("O resultado da operação é: " + soma)
+            }
+            exibirOperacao(num1, num2, soma)*/
+            
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

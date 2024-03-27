@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>JavaScript - DOM</title>
+        <!-- DOM: Document Object Model é a estrutura do html.
+             Selecionamos elementos da página html para o js utilizando:
+             -getElementById()obs: um unico elemento.
+             -getElementsByTagName()
+             -getElementsByClassName()
+             -getElementsByName()-->
+    
+             
+    </head>
+    <body>
+        <input 
+        type="text" 
+        name="nome" 
+        id="nome_usuario" 
+        class="campo_texto" 
+        placeholder="Digite seu nome!">
+
+        <script>
+            //console.log(document.getElementById('nome_usuario'))
+            //console.log(document.getElementsByTagName('input'))
+            //console.log(document.getElementsByClassName('campo_texto'))
+            console.log(document.getElementsByName('nome'))
+        </script>
+    </body>
+</html>

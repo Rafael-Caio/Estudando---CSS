@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - Escopo de variáveis</title>
+    
+    <script>
+        /*Tem 3 escopos:
+            - global: é o escopo geral do script como um todo.
+            - função: é o conteúdo inserido dentro de um bloco de função.
+            - bloco: as instruções contidas dentro dos comandos como o if/switch.
+
+            Funçao e bloco tem ecesso a var do global.
+            rosting: indica elevação de declaração de variável. ou seja
+            a var serie2 sofreu um rosting para global, pois as variaveis declaradas
+            no escopo de BLOCO, fica disponível para todo escopo.
+
+            Variavies declaradas no escopo de função so fica disponível dentro do escopo onde
+            esta inserida, portanto não fica disponivel para os outros escopos, então não sofre
+            rosting.
+
+            OBS: se o bloco estiver dentro do escopo global, a var declarada dentro dele sofre rosting para a global.
+            Mas se o bloco estiver dentro de uma função a var declarada dentro dele sofre rosting,
+            mas NÃO para global e SIM para a função.
+        */
+
+        //Escopo global
+        var serie = "Friends"
+        //bloco
+        if (true){
+            var serie2 = "Games of Thrones"//esta no bloco, mas fica disponível para todo escopo.
+            document.write(serie)
+        }
+
+        document.write(serie2)
+
+        document.write("<br />")
+
+        //função
+        function x() {
+            var serie3 = "The Walking Dead"
+            document.write(serie)
+            document.write(serie2)
+        }
+        x()
+
+        document.write("<br />")
+        document.write(serie3)//não aparece pois fica apenas dentro da função inserida.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

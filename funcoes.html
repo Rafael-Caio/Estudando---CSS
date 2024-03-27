@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - Funções</title>
+    <!-- Tem o objetivo de encapsular um bloco de códigos bem definidos -->
+    <!-- recomenda-se para nomear uma função, utilizar primeiro um verbo no infinitivo com letras minusculas e depois
+         um substantivo iniciado com letra maiuscula ex: calcularArea, encerrarJogo -->
+    <!-- Podem ser de 2 tipos:
+           - void = quando chamada processa apenas a função determinada.
+           - retorno = quando chamada além de processar a função, retorna algo. 
+    -->
+    <!-- Estrutura:
+
+            function calcularAreaTerreno(largura, comprimento) {
+                var area = largura * comprimento
+                return area
+            }
+    -->
+    <script>
+        /*
+        var largura = prompt("Digite a largura:")
+        var comprimento =  prompt("Digite o comprimento:")
+        //OBS: na multiplicação não concatena, por isso não precisamos fazer casting dos valores.
+        function calcularAreaTerreno ( largura, comprimento ) {
+            
+            //lógica
+            var area = largura * comprimento
+             return area
+
+        }
+        var area = calcularAreaTerreno (largura, comprimento)
+
+        document.write ("O terreno possui " + area + " por metro quadrado")
+        */
+
+        // Flexibilização de parametros
+        function soma(a, b) {
+            /*tratando ausencia de b: neste caso o resultado não é NaN*/
+            //b = b === undefined ? 0 : b
+            var soma = a + b
+            return soma
+            
+        }
+        console.log(soma(7, 7))
+        //passando mais parametros além dos solicitados, o javascript desconsidera os adicionais.
+        console.log(soma(7, 7, 8, 9))
+        //passando menos valores que os solicitados, os valores ausentes são undefined.
+        console.log(soma(7))// resultado "not a number"(NaN)
+        //não passando nenhum parametro.
+        console.log(soma())//ambos são undefined por isso o resultado é NaN
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

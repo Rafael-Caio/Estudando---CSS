@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JavaScript - Manipulando classes de elementos</title>
+
+</head>
+
+<body>
+    <input id="caixa" class="estilo" type="text" onfocus="modificaFundo()" onblur="recuperaCor()">
+
+    <script>
+        //modifica cor onfocus
+        function modificaFundo() {
+            document.getElementById('caixa').style.background = "#FFFF00"
+        }
+        //voltar cor e lógica onblur
+        function recuperaCor() {
+        var valorCampo = document.getElementById('caixa').value
+            if(valorCampo.length < 3) {
+                document.getElementById('caixa').style.background = "#FF0000"
+            } else {
+                document.getElementById('caixa').style.background = "#008000"
+            }
+        }  
+        
+    </script>
+</body>
+
+</html>

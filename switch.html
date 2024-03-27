@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript - Switch</title>
+        <!-- SWITCH:
+            - São operadores condicionais que seguem determinado fluxo de acordo com as condições.
+            - Ele tem a mesma função que os condicionais if/ else, porem é mais intuitivo.
+            - Só conseguimos fazer comparações de identicos (===).
+            - Organiza o código de uma forma muito mais fácil de entender.
+            - Sempre ao terminar a operação usaos o comando break, paraindicar o seu termino.
+            - Podem ser inseridos quantos cases forem necessários.
+            obs: caso não seja colocado o break, todos os cases serão execultados,
+            até um break ser encontrado.
+        -->
+        
+        <script>
+            /* Estrutura switch:
+                
+                var opcao = 2
+
+                switch (opcao) {
+
+                    case 1:
+                        //se opcao === 1
+                        break
+
+                    case 2:
+                        //se opcao === 2
+                        break
+
+                    default://funciona como o else
+                        //se opcao não encontrado
+                        break
+                }
+            */
+
+            //OBS: faz comparações de identicos (===)
+            // neste caso o valor identico ao parametro oferecido.
+            //se remover o break todos os cases serão excultados, pois ele indica o final do case.
+            //var parametro = 2
+            var parametro = prompt ("Digite seu número:")// retorna string
+            //podemos usar casting para mudar o tipo.
+            //switch (parametro.toString()), neste caso parametro number e os case strings..
+            switch (parseInt(parametro)) {
+
+                case 1:
+                    document.write ("parametro 1")
+                    break
+
+                case 2:
+                    document.write ("parametro 2")
+                    break
+
+                default://opcional
+                    document.write ("Default")
+                    break
+            }
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

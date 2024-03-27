@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>JavaScript - manipulando valores input text</title>
+        <script>
+            function distrubuiCaracter() {
+                //selecionar o valor digitado
+                var caracter = document.getElementById("entrada").value
+                //limpar campo
+                document.getElementById("entrada").value = ""//não deixe espaço entre as aspas.
+                
+                //eleiminar espaços em branco
+                caracter.trim()
+
+                switch (caracter) {
+                    case "0":
+                    case "1":
+                    case "2":
+                    case "3":
+                    case "4":
+                    case "5":
+                    case "6":
+                    case "7":
+                    case "8":
+                    case "9":
+                    case "10":
+                        //adicionar caracter ao campo referente a numeros
+                        document.getElementById("apenas_numero").value = caracter//usando += concatena os caracteres atribuidos.
+                        break;
+                        default:
+                        //adicionar caracter ao campo referente a letras
+                        document.getElementById("apenas_letra").value = caracter//usando += concatena os caracteres atribuidos.
+                }       
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <label for="entrada">Caracter:</label>
+        <input type="text" name="caracter" id="entrada" placeholder="Digite um caracter" onkeyup="distrubuiCaracter()"><br><br>
+        <label for="apenas_letra">Letras:</label>
+        <input type="text" name="letra" id="apenas_letra" disabled="disabled">&nbsp;&nbsp;
+        <label for="apenas_numero">Números:</label>
+        <input type="text" name="numero" id="apenas_numero" disabled="disabled">
+
+    </body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - Atividade fixação aritmeticos</title>
+    <script>
+        var nome = prompt ("Digite sem nome: ")
+        var altura = prompt ("Digite sua altura em centímetros: ")
+        var peso = prompt ("Digite seu peso: ")
+
+        altura = parseFloat (altura)
+        peso = parseFloat (peso)
+
+        //conversão da altura em metros(m)
+        altura /= 100
+
+        IMC = peso / altura**2
+
+        if (IMC < 16) {
+            M = "<b>Baixo peso muito grave</b>" 
+            //document.write(M)
+        }
+        if (IMC >= 16 && IMC <= 16.99) {
+            M = "<b>Baixo peso grave</b>" 
+            //document.write (M)
+        }
+        if (IMC >= 17 && IMC <= 18.49) {
+            M = "<b>Baixo peso</b>"
+            //document.write (M)
+        }
+        if (IMC >= 18.50 && IMC <= 24.99) {
+            M = "<b>Peso normal</b>"
+            //document.write (M)
+        }
+        if (IMC >= 25 && IMC <= 29.99) {
+            M = "<b>Sobrepeso</b>"
+            //document.write (M)
+        }
+        if (IMC >= 30 && IMC <= 34.99) {
+            M = "<b>Obesidade grau I</b>"
+            //document.write (M)
+        }
+        if (IMC >= 35 && IMC <= 39.99) {
+            M = "<b>Obesidade grau II</b>"
+            //document.write (M)
+        }
+        if (IMC > 40) {
+            M = "<b>Obesidade grau III</b>"
+            //document.write (M)
+        }
+
+        document.write (nome + " possui índice de massa corporal igual a " + IMC + ", sendo classificado como: " + M)
+
+        /*
+        a) Se M estiver abaixo de 16 : Baixo peso muito grave
+        b) Se M estiver entre 16 e 16,99: Baixo peso grave
+        c) Se M estiver entre 17 e 18,49: Baixo peso
+        d) Se M estiver entre 18,50 e 24,99: Peso normal
+        e) Se M estiver entre 25 e 29,99: Sobrepeso
+        f) Se M estiver entre 30 e 34,99: Obesidade grau I
+        g) Se M estiver entre 35 e 39,99: Obesidade grau II
+        h) Se M for maior que 40: Obesidade grau III
+        */ 
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>

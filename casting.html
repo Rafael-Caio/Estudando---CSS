@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript - casting</title>
+        <!-- Casting de tipos que consiste em converter um tipo de dado em outro tipo de dado -->
+        <!-- Aplicamos a parseInt, para no lugar de uma string de valor NUMÉRICO, 
+        retornar um number inteiro-->
+        <!-- Aplicamos a parseFloat, para no lugar de uma string de valor NUMÉRICO fracionário, 
+        retornar um number fracionário-->
+        <!-- toString() utilizados para converter number em strings e aplicamos diretamente no  elementos para
+        impressão -->
+        <script>
+            //antes de aplicar o casting (parseInt, parseFloat), o valor do prompt vai concatenar, pois o prompt so consede strings e com strings não realizamos calculos. 
+
+            //var variavel1 = prompt("digite um número:");
+            //var variavel2 = prompt("digite outro número:");
+            
+            var variavel1 = 10
+            var variavel2 = 20
+
+            //aplicando o parseInt (para retornar um number inteiro no lugar de uma string de valor numérico)
+            //aplicando o parseFloat ele preserva a fração do valor (se for empregado uma fração, ele vai converter em um valor que tenha essa fração) 
+            
+            //variavel1 = parseInt(variavel1);
+            //variavel2 = parseFloat(variavel2);
+            
+           
+            //após aplicar o parseInt, o resultado será a soma dos valores, pois o parseInt, convertel a string de valor numerico em number.
+            console.log(variavel1);
+            console.log(variavel2);
+
+            //metodo toString()
+            document.write(variavel1.toString() + variavel2.toString());
+           
+
+            /*Operadore lógicos:
+            E (&&) retorna true se todas as expressões forem verdadeiras.
+            OU (||) retorna verdadeiro se pelo mnos uma das expressões forem verdadeiras.
+            Negação (!) inverte o resultado da expressão de comparação. ex: true vira false/ false vira true.
+            */
+        
+        </script>
+    </head>
+    <body>

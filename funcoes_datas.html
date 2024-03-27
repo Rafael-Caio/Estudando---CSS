@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - Funções Datas</title>
+    <!-- para usar o data devemos criar uma nova instancia no caso um new date() -->
+    <!-- O metodo get é utilizados para obter (valores) datas -->
+    <script>
+        /*
+        //getData() obtém um dia como números de 1 a 31.
+        // Essa data é de acordo com o sistema operacional do usuário.
+        var data = new Date()
+        document.write(data.getDate())
+        document.write("<br />")
+        //getMonth() obtem o mes como um número de 0 a 11.
+        //de 0 a 11, pois toma como referencia a posição e não a quantidade.
+        //Referente a posição a contagem é iniciada do 0.
+        //por isso somamos + 1.
+        document.write(data.getMonth() + 1)
+        document.write("<br />")
+        //getFullYear() tetorna o ano com 4 digitos.
+        document.write(data.getFullYear())
+        document.write("<br />")
+        //concatenando
+        document.write(data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear())
+        document.write("<br />")
+        document.write("<h3> Horas: </h3>")
+        //hora - minutos - segundos:
+        document.write(data.getHours() + ":" + data.getMinutes() + ":" + data.getSeconds())
+        document.write("<br />")
+
+        //O metodo set é usado para definir uma parte da data.
+        document.write("<h3>Desafios</h3>")
+        document.write("<h4>Dias:</h4>")
+        //adicionar ou remover datas:
+        document.write(data.toString())
+        data.setDate(data.getDate() + 1)
+        document.write("<hr />")
+        document.write(data.toString())
+        document.write("<hr />")
+        data.setDate(data.getDate() - 2)
+        document.write(data.toString())
+
+        document.write("<br /><br /><hr />")
+
+        document.write("<h4>Meses:</h4>")
+        //adicionar ou remover meses:
+        document.write(data.toString())
+        data.setMonth(data.getMonth() + 1)
+        document.write("<hr />")
+        document.write(data.toString())
+        document.write("<hr />")
+        data.setMonth(data.getMonth() - 2)
+        document.write(data.toString())
+
+        document.write("<br /><br /><hr />")
+
+        document.write("<h4>Anos:</h4>")
+        //adicionar ou remover anos:
+        document.write(data.toString())
+        data.setFullYear(data.getFullYear() + 1)
+        document.write("<hr />")
+        document.write(data.toString())
+        document.write("<hr />")
+        data.setFullYear(data.getFullYear() - 2)
+        document.write(data.toString())
+        */
+
+        //obs: existe uma sequencia correta de colocar os valores dentro da instancia.
+        //new Date(year,month,day,hours,minutes,seconds,milliseconds)
+        //15/01/2024
+        var data1 = new Date(2024, 0, 15)//lembre da contagem de posições dos meses. 1 = 0 
+
+        //23/02/2024
+        var data2 = new Date(2024, 1, 23)
+        document.write(data1.toString())
+        document.write("<hr />")
+        document.write(data2.toString())
+        //precisamos converter em algo que possa seer calculado.
+        //getTime() recupera a qauntidade de millisegundos entre 1 de janeiro 1970 (data computacional).
+        //até as datas estabelecidas como referencia.
+        document.write("<hr />")
+        document.write(data1.getTime())
+        document.write("<hr />")
+        document.write(data2.getTime())
+        document.write("<hr />")
+
+        //encontrar a quantidade de milliseconds entre data1 e data2.
+        //não podemos trabalhar com valores negativos se tratando de datas.
+        //por isso usamos o metodo Math.abs() que retorna o valor absoluto positivo de um número.
+        var milisegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+        document.write(milisegundos_entre_datas)
+        document.write("<br />")
+        //1 dia tem 24 horas.
+        //1 hora tem 60 minutos.
+        //1 minuto tem 60 segundos
+        //1 segundo tem 1000 milisegundos.
+        var milisegundos_por_dia = (1*24*60*60*1000)
+        document.write("1 dia tem: " + milisegundos_por_dia + " milisegundos" )//corresponde a milisegundos.
+        document.write("<br /><br /><hr />")
+        //o valor encontrado teve uma fração que ja entra na madrugada do outro dia.
+        //por isso foi utilizado um arredondamento para mais. 
+        document.write("Adiferença entre data1 e data2 é de " + Math.ceil(milisegundos_entre_datas / milisegundos_por_dia) + " dias(s).")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

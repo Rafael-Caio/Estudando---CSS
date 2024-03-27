@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>JavaScript - Eventos Formulários</title>
+        <!-- 
+            onfocus: acionado quando o elemento recebi o foco do cursor do mous clicando nele.
+            onblur: acionado quando o elemento perdi o foco, quando clicamos em outro elemento.
+            onchange: acionado quando o estado do elemento é modificado. Quando modificamos a opção,
+            em elementos tipo select.
+        -->
+        <script>
+            
+        </script>
+    </head>
+    
+    <body >
+        <!--<input onfocus = "console.log('teste')" type="text">-->
+        <!--<input onblur = "console.log('teste')" type="text">-->
+        <!-- combinando elementos -->
+        <input onfocus="console.log('onfocus')" onblur="console.log('onblur')">
+
+        <select onchange="console.log('Estado foi  modificado')">
+            <option>-- Selecione --</option>
+            <option value="1">primeira opção</option>
+            <option value="2">segunda opção</option>
+        </select>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript - operadores lógicos</title>
+        
+        <script>
+            /*Operadore lógicos:
+            - Sevem para conectar operações de comparações.
+            - Operações de comparações sevem para tomadas de decisões.
+            - E (&&) retorna true se TODAS as expressões forem verdadeiras.
+            - OU (||) retorna verdadeiro se pelo menos uma das expressões forem verdadeiras.
+            - Negação (!) inverte o resultado da expressão de comparação. ex: true vira false/ false vira true.
+            */
+            document.write ("<h3>Usando &&</h3>")
+           //true && true = true (todas as comparações são verdadeiras)
+           //true && true && false = false (uma das comparações é false)
+           if (2 == 2 && 3 >= 1 && "a" == "b") {
+            document.write ("verdadeiro");
+           }
+           else {
+            document.write ("falso");
+           }
+
+           document.write ("<hr />")
+
+           document.write ("<h3>Usando ||</h3>")
+           //true || true || false = true (no OU pelo menos uma das condições deve ser verdadeira ara ser true)
+           //se TODAS as comparações forem falsas o retorno é falso.
+           if (2 == 2 || 3 >= 1 || "a" == "b") {
+            document.write ("verdadeiro");
+           }
+           else {
+            document.write ("falso");
+           }
+
+           document.write ("<hr />")
+
+           document.write ("<h3>Usando negação (!)</h3>")
+           //Negação inverte o resultado da comparação. (!)
+           //é false, mas usando o (!) fica verdadeira
+           if (!(4 == 2)) {
+            document.write ("verdadeiro");
+           }
+           else {
+            document.write ("falso");
+           }
+        
+           document.write ("<hr />");
+
+           document.write ("<h3>Condição do aluno</h3>");
+           var nota = prompt("digite a nota do aluno:");
+           var faltas = prompt("digite a quantidade de faltas:");
+           
+           var media = 7;
+           var faltas_maximas = 15;
+
+           /*if (nota >= media && faltas <= faltas_maximas) {
+            document.write(" aluno aprovado")
+           }
+           else {
+            document.write("aluno reprovado")
+           };*/
+           /*Operador ternário:
+            - Estrutura de decisão semelhante ao if e else, a diferença 
+             é que apresenta uma syntaxe mais inchuta, porém ele é limitado.
+            - Nao odemos imlementar nenhum bloco logico dentro dele.
+            */
+           //syntaxe operador ternário.
+           var resultado = (nota >= media && faltas <= faltas_maximas) ? "aluno aprovado" : "aluno reprovado" 
+           document.write (resultado);
+        
+        
+        </script>
+    </head>
+    <body>
+    </body>  
+</html>
