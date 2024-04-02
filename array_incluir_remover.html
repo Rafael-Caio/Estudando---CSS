@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript - Array adicionar e remover elementos</title>
+        
+        <script>
+           var lista_frutas = Array()
+           lista_frutas[0] = 'banana'
+           lista_frutas[1] = 'Uva'
+           lista_frutas[2] = 'Abacaxi'
+
+           //adicionar elemento no final do array
+           lista_frutas.push('Maçã')
+           //adicionar elemento no inicio do array
+           lista_frutas.unshift('Morango')
+
+           //excluir elemento no final do array
+           lista_frutas.pop()
+           //excluir elemento no inicio do array
+           lista_frutas.shift()
+           //OBS: no caso de exclusão não precisa passar parametros.
+           console.log(lista_frutas)
+
+           var lista_coisas = Array()
+           lista_coisas['frutas'] = Array()
+           lista_coisas['pessoas'] = []
+
+           lista_coisas['frutas'][0] = 'Ameixa'
+           lista_coisas['frutas'][1] = 'Biriri'
+           lista_coisas['frutas'].push('Uva')
+           lista_coisas['frutas'].unshift('Graviola')
+           lista_coisas['frutas'].pop()
+           lista_coisas['frutas'].shift()
+
+           lista_coisas['pessoas'][0] = 'Alfredo'
+           lista_coisas['pessoas'][1] = 'Afranio'
+           lista_coisas['pessoas'].push('Rafael')
+           lista_coisas['pessoas'].unshift('Debora')
+           lista_coisas['pessoas'].pop()
+           lista_coisas['pessoas'].shift()
+
+           console.log(lista_coisas)
+
+        </script>
+    </head>
+    <body>
+    </body>  
+</html>
