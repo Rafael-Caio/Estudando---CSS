@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript - Array Multidimensional</title>
+        <!-- Array Multidimensional ou bidimensionais:
+             -São array de arrays, ou seja, uma lista em que os indices armazenam outros arrays.-->
+        <script>
+           var lista_coisas = Array()
+           lista_coisas['frutas'] = Array('banana', 'uva', 'pera', 'maçã', 'mamão')
+
+           /*lista_coisas['frutas'][0] = 'banana'
+           lista_coisas['frutas'][1] = 'uva'
+           lista_coisas['frutas'][2] = 'pera'
+           lista_coisas['frutas'][3] = 'maçã'
+           lista_coisas['frutas'][4] = 'mamão'*/
+
+           lista_coisas['pessoas'] = []
+
+           lista_coisas['pessoas']['a'] = 'Daniel'
+           lista_coisas['pessoas']['b'] = 'Tatiana'
+           lista_coisas['pessoas']['c'] = 'Carla'
+
+           document.write(lista_coisas['frutas'][4])
+           document.write("<br />")
+           document.write(lista_coisas['pessoas']['a'])
+        </script>
+    </head>
+    <body>
+    </body>  
+</html>
