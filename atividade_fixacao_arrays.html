@@ -12,12 +12,13 @@
     function adicionarObjetos() {
         
         var objeto = document.getElementById('objeto').value
-
+        //valor diferente de vazio indica que o campo esta preenchido.
         if (objeto != '') {
-            
+            //valor diferente de -1 indica que o objeto existe.
             if (objetos.indexOf(objeto) !== -1) {
                 alert('Objeto já foi adicionado')
             } else {
+                //adicionando novo elemento ao final.
                 objetos.push(objeto)
                 console.log(objetos)
 
@@ -30,6 +31,7 @@
         }
     }
     function ordenarObjetos() {
+        // colocando em ordem alfanumerica.
         objetos.sort()
         console.log(objetos)
     }
