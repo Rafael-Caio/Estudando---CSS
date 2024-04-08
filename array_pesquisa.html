@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript - Array pesquisa</title>
+        
+        <script>
+           var lista_frutas = Array()
+
+           lista_frutas[0] = 'banana'
+           lista_frutas[1] = 'uva'
+           lista_frutas[2] = 'maçã'
+           lista_frutas[3] = 'abacaxi'
+
+           //o valor encontrado será -1 caso o elemento não exista.
+           //case sensitive determina que devemos escrever o nome do elemnto exatamente igual.
+           var auxiliar = lista_frutas.indexOf('banana')
+           if(auxiliar === -1) {
+             console.log("o elemento não existe")
+           }else {
+             console.log('elemento existe na posição '+ auxiliar)
+           }
+
+        </script>
+    </head>
+    <body>
+    </body>  
+</html>
