@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>For in</title>
+        <script>
+            //var listaConvidados = ["Rafael", "Clara", "Maria", "Debora", "Helena"]
+                //listaConvidados.unshift("Jesus Cristo")
+                //console.log(listaConvidados.sort())
+
+            //testando indices aleatórios:
+            var listaConvidados = Array()
+         
+            listaConvidados ['a'] = 'Rafael'
+            listaConvidados [10] = 'Clara'
+            listaConvidados ['zebra'] = 'Maria'
+            listaConvidados [-1] = 'Debora'
+            listaConvidados [true] = 'Helena'
+
+            console.log(listaConvidados)
+
+            for (var x in listaConvidados) {
+                console.log('indice '+ x + ' = ' + listaConvidados[x])
+            }
+            
+            //Testando com while:
+            /*var x = 0
+            while (x < listaConvidados.length) {
+                document.write('indice '+ x + ' = ' + listaConvidados[x] + '<br />')
+                x++
+            }*/
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

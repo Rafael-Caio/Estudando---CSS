@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>ForEach</title>
+        <!-- Funciona apenas em indices numericos e percorre cada elemnto do array,
+        executando a logica da função para cada elemento -->
+        <script>
+            var listaFuncionarios = ["Rafael", "Maria", "Jamilton", "Lorena", "Heitor"]
+            //armazenando função dentro de uma variável
+             var f = function(valor, indice, array){
+                document.write(indice + " = " + valor + "<br />")}
+            listaFuncionarios.forEach(f)
+            /*console.log(listaFuncionarios)
+            //forEach percorre para cada array
+            listaFuncionarios.forEach(function(valor, indice, array){
+                console.log(indice + " = " +valor)
+                console.log(array)//o array será impresso 5 vezes pois o forEach executa a lógica para cada elemento do array.
+                if (valor == "Lorena"){
+                    listaFuncionarios[indice] = "Roberta"
+                    console.log(listaFuncionarios)
+                    console.log(listaFuncionarios.unshift("Deus"))
+                    console.log(listaFuncionarios)
+                }
+            })*/
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
