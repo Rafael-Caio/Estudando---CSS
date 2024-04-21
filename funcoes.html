@@ -36,8 +36,8 @@
         */
 
         // Flexibilização de parametros
-        function soma(a, b) {
-            /*tratando ausencia de b: neste caso o resultado não é NaN*/
+        /*function soma(a, b) {
+            /*tratando ausencia de b: neste caso o resultado não é NaN
             //b = b === undefined ? 0 : b
             var soma = a + b
             return soma
@@ -49,7 +49,21 @@
         //passando menos valores que os solicitados, os valores ausentes são undefined.
         console.log(soma(7))// resultado "not a number"(NaN)
         //não passando nenhum parametro.
-        console.log(soma())//ambos são undefined por isso o resultado é NaN
+        console.log(soma())//ambos são undefined por isso o resultado é NaN*/
+
+        function soma(){
+            //recuperação de parametros variáveis.
+            /*O objeto "arguments" é utilizado para toda função que retorna 
+            algo semelhnate ao Array. Esta variavel fica dentro do escopo local 
+            da função e retorna os elementos utilizados como parametros para a função*/ 
+            var resultado = 0
+            //console.log(arguments)
+            for (var i in arguments){
+                resultado += arguments[i]//atrinuição de adição x += y significa x = x + y
+            }
+            return resultado
+        }
+        console.log(soma(5, 7, 3.5, " Rafael"))//parametros função soma.
     </script>
 </head>
 <body>

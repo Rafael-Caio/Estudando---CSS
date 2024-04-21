@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - Tratamento de Erros</title>
+    <!-- Try(tentar)
+         Catch(pegar)
+         Throw(lançar)
+         Finally(finalmente) 
+         OBS: Todos são blocos de códigos.
+        -->
+    
+    <script>
+        //lança excessões dentro das aplicações.
+        //geralmente é empregado no catch, mas pode ser empregado em qualquer lugar dentro do script.
+        //Cria uma no va instancia do objeto Error e forçar a exibição desse erro, interrompendo a plicação
+        //throw new Error("Estou estudando e adquirindo conhecimentos, não se preocupe!!!Faço a minha parte e Deus faz a dele na minha vida!")
+
+
+        var video = Array()
+        video [1] = Array()
+        video[1]["nome"] = "Naruto"
+        video[1]["categoria"] = "anime"
+
+        function getVideo(video){
+            
+
+            //o try se iniciado deve ser encerrado.
+            //colocamos o erro dentro do try
+            try {
+                //lógica
+                //http
+                console.log(video[0]["nome"])
+            }
+
+            //captura o erro para ser tratado
+            //passamos o erro como parametro
+            catch (erro) {
+                tratarErro(erro)
+                console.log("Agora o erro pode ser tratado")
+                throw new Error("Estou estudando e adquirindo conhecimentos, não se preocupe!!!Faço a minha parte e Deus faz a dele na minha vida!")
+            }
+
+            //finaliza
+            finally {
+                console.log("Sempre passa por aqui (try/ catch)")
+            }
+            console.log("A operação não morreu")
+
+        }
+        function tratarErro(e){
+            //logica para registrar o erro no servidor.
+            console.log(e)
+        }
+        getVideo(video)
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
