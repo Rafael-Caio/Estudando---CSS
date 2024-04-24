@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - BOM window</title>
+    
+    
+    <script>
+       var myPage
+       function abrirPopUp(){
+        //window.open("URL", "name", "specs", "replace")
+        //obs:specs são especificações como width, height e outros.
+        myPage = window.open("", "abrir_janela", "width=200px, height=200px")
+       }
+
+       function fecharPopUp(){
+        myPage.close()
+       }
+    </script>
+</head>
+<body>
+    <button onclick="abrirPopUp()">Abrir janela</button>
+    <button onclick="fecharPopUp()">Fechar janela</button>
+    <button onclick="window.print()">imprimir página</button>
+    <button onclick="window.confirm('chose a option')">Confirmação</button>
+</body>
+</html>
