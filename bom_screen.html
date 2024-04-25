@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - BOM window screen</title>
+    <script>
+        //availHeight- altura sem barra de ferramenta
+        //availWidth- altura sem a barra de ferramenta
+       var altura = window.screen.availHeight
+       var largura = window.screen.availWidth
+
+       //document.write("A altura desta página é : "+ altura + "<br />")
+       //document.write("A largura desta página é : "+ largura + "<br />")
+
+       if(largura < 500){
+        document.write("dimenssões da tela para navegador mobile")
+       }else{
+        document.write("dimenssões para navegador web")
+       }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
