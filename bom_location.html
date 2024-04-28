@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - BOM window location</title>
+    <script>
+        function acessaGoogle(){
+            window.location.href="http://www.google.com"
+        }
+        function acessaFaus(){
+            window.location.href="https://www.faus.com.br/"
+        }
+
+        function redirecionaPagina(){
+            window.location.replace("https://www.youtube.com")
+        }
+
+        var x = "https://www.faus.com.br"
+        console.log(location.host(x))
+    </script>
+</head>
+<body>
+    <button onclick="acessaGoogle()">Acessar o Google</button>
+    <button onclick="acessaFaus()">Acessar Faus</button>
+    <button onclick="window.location.reload()">Atualizar página</button>
+    <button onclick="redirecionaPagina()">Redirecionar</button>
+</body>
+</html>
