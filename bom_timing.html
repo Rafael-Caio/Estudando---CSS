@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Javascript - Window Timing</title>
+        <script>
+            //setTimeout- executa a ação uma vez após o tempo estimado.
+            //clearTimeout - usado para interromper o setTimeout.
+            //setInterval - execulta a ação sempre que o tempo estimado terminar(looping)
+            //clearInterval - usado para interromper o setInterval.
+            //milisegundo - segundos multiplicados por 1000.
+            /*sintaxe:
+                  setTimeout(<ação>, <tempo em milisegundos>);
+                  clearTimeout()
+
+                  setInterval(<ação>, <tempo em milisegundos>);
+                  clearInterval()*/
+            //setTimeout(function() { document.write('testando setTimeout' + '<br />') }, 2000)
+
+            //var i = 100
+            var i = 5
+            var x = setInterval(function() {
+                document.write(i + " ") 
+                i -= 1 
+
+                if (i === 0) {
+                    //window.location.reload()
+                    clearInterval(x)
+                }
+            }, 1000)
+                
+            
+
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+
+</html>
