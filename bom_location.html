@@ -17,8 +17,14 @@
             window.location.replace("https://www.youtube.com")
         }
 
-        var x = "https://www.faus.com.br"
-        console.log(location.host(x))
+        //host - Representa o nome de domínio completo do URL, incluindo o número da porta se especificado.
+        console.log(window.location.host)
+        //hostname - Representa apenas o nome de domínio do URL, sem o número da porta.
+        console.log(window.location.hostname)
+        //origin -  Representa o protocolo, nome de domínio e porta (se especificado) do URL, sem a parte do caminho e consulta.
+        console.log(window.location.origin)
+        //search - Representa a string de consulta do URL, iniciando com um ponto de interrogação (?), contendo os parâmetros e seus valores.
+        console.log(window.location.search)
     </script>
 </head>
 <body>
