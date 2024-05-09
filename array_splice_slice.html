@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript - Array splice()</title>
+        <!-- splice(indice posição, numero de elemento removido, nome de elementos adicionado): 
+            remove e adiciona elementos ao array.
+             toSpliced: garnte a criação de um novo array, mantendo o array original inalterado.
+             slice: divide um pedaço do array em um NOVO array. O corte é iniciado 
+             do indice indicado entre parenteses. Não altera o array principal. -->
+            
+        <script>
+        var frutas = ["maçã", "uva", "abacaxi", "melão"]
+        
+
+        var verduras = Array()
+        verduras[0] = "cenoura"
+        verduras[1] = "batata"
+        verduras[2] = "beterraba"
+        verduras[3] = "abobora"
+
+        var roupa = Array()
+        roupa[0] = "calça"
+        roupa[1] = "camisa"
+        roupa[2] = "boné"
+        roupa[3] = "meia"
+        roupa[4] = "sapato"
+
+        var animes = Array()
+        animes[0] = "Dragon ball"
+        animes[1] = "Dr.Stone"
+        animes[2] = "Death Note"
+        animes[3] = "Black Glover"
+        animes[4] = "Attack on Titan"
+
+        //adicionando
+        frutas.splice(4, 0, "banana", "pera")
+        console.log(frutas)
+        //removendo "batata"
+        verduras.splice(1, 1)
+        console.log(verduras)
+        //usando spliced
+        var newListroupa = roupa.toSpliced(2, 1)
+        console.log(newListroupa)
+        //usando slice
+        var watchNow = animes.slice(1)
+        console.log(watchNow)
+        
+
+        </script>
+    </head>
+    <body>
+    </body>  
+</html>
